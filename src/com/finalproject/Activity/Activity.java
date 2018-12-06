@@ -9,14 +9,22 @@ public class Activity {
 	private int score;
 	private int numberOfJoin;
 	private int limitOfJoin;
+	private String date;
+	private String status;
+	private String place;
 	public Activity() {}
-	public Activity(int activityID, String activityContent, Semester semester, int score, int numberOfJoin, int limitOfJoin) {
+	public Activity(int activityID, String activityContent, Semester semester, int score, int numberOfJoin,
+			int limitOfJoin, String date, String status, String place) {
 		this.activityID = activityID;
 		this.activityContent = activityContent;
 		this.setSemester(semester);
 		this.score = score;
 		this.numberOfJoin = numberOfJoin;
 		this.limitOfJoin = limitOfJoin;
+		this.date = date;
+		this.status = status;
+		this.place = place;
+		
 	}
 	public String getActivityContent() {
 		return activityContent;
@@ -53,5 +61,23 @@ public class Activity {
 	}
 	public void setSemester(Semester semester) {
 		this.semester = semester;
+	}
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getPlace() {
+		return place;
+	}
+	public void setPlace(String place) {
+		this.place = place;
 	}
 }

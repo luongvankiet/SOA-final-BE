@@ -21,4 +21,10 @@ public class StudentServices {
 	public Student getStudentByEmail(@PathParam("email") String email){
 		return studentDAO.getStudentByEmail(email);
 	}
+	
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response createNewStudent(Student student){
+		return studentDAO.createNewStudent(student);
+	}
 }

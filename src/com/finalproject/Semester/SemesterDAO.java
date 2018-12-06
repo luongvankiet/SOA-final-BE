@@ -18,10 +18,10 @@ public class SemesterDAO {
 		Statement stm = null;
 		ResultSet rs = null;
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
-			String connectionUrl = "jdbc:mysql://localhost:3306/soa_final";
-			String connectionUser = "root";
-			String connectionPassword = "";
+			Class.forName("org.postgresql.Driver");
+			String connectionUrl = "jdbc:postgresql://ec2-54-243-150-10.compute-1.amazonaws.com/d6u2br8eoqak53?&ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory";
+			String connectionUser = "ycgrutozfhhllk";
+			String connectionPassword = "e828c983daf61d1f8fe2a3f972db44f037605c0841e64242721fef24d94f2c60";
 			conn = DriverManager.getConnection(connectionUrl, connectionUser, connectionPassword);
 			stm = conn.createStatement();
 			rs = stm.executeQuery("SELECT * FROM semester");
